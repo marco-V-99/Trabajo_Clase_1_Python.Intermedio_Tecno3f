@@ -1,0 +1,27 @@
+conjunto_a = [1,2,5,4,7,8,5,90,89,88,777,78,65,32,43,12,45,65]
+conjunto_b = [2,5,6,1,3,8,45,67,86,43,91,22,37,71,26,90,15,68]
+
+
+print(conjunto_a)
+print(conjunto_b)
+
+ca = set(conjunto_a)
+cb = set(conjunto_b)
+#Dados dos conjuntos, A y B, escribe un programa en Python que imprima los elementos que se encuentran en A o en B, o en ambos.
+print (f"Los conjuntos que se encuentran en A o B o en ambo son:{ca & cb}")
+
+#Dados dos conjuntos, A y B, escribe un programa en Python que imprima los elementos que se encuentran en A y en B
+print (f"Los conjuntos que se encuentran en A o B son: {ca | cb}")
+
+#Dados dos conjuntos, A y B, escribe un programa en Python que imprima el conjunto de los elementos que se encuentran en A o en B, pero no en ambos.
+print (f"Los conjuntos que se encuentran en A o B pero no se repiten:{ca.symmetric_difference(cb)}")
+
+#Dados un conjunto, A, escribe un programa en Python que imprima si el conjunto es un subconjunto de otro conjunto, B.
+subconjunto = ca.issubset(cb)
+if subconjunto == False:
+    print (f"El conjunto A no es un subconjunto de B")
+else:
+    print (f"El conjunto A es un subconjunto de B")
+
+#Dados un conjunto, A, escribe un programa en Python que imprima el número de elementos del conjunto.
+print (f"El conjunto A tiene un total de {len(ca)} objetos")
